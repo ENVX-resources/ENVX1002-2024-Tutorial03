@@ -2,19 +2,13 @@
 
 ## ENVX1002
 
-### Tutorial 01
+### Tutorial 03
 
 Semester 1, 2024
 
-<!-- Use this badge if the draft is not ready. -->
-
-[![status - In Development](https://img.shields.io/badge/status-In_Development-critical?style=for-the-badge)](#)
-
-<!-- Use this badge to let students know that the resource is ready. -->
 
 [![status - Ready](https://img.shields.io/badge/status-Ready-success?style=for-the-badge)](#)
 
-_(Pick one of the badges above and hide the other, and remove this comment.)_
 
 _To view the file, click on the link :link: on the **right side of the page** under the "About" section._
 

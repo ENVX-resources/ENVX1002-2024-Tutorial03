@@ -1,0 +1,115 @@
+---
+title: Tutorial 03
+subtitle: "ENVX1002"
+description: The University of Sydney
+date: today
+date-format: "[Semester 1,] YYYY"
+---
+
+## R Commands for Binomial and Poisson
+$X \sim Bin(np)$ and  $X \sim Po(\lambda)$
+
+| Function              | Binomial        | Poisson            |
+|:--------------------- |:--------------- |:------------------ |
+| PDF $P(X=x)$          | $dbinom(x,n,p)$ | $dpois(x,\lambda)$ |
+| CDF $F(x)=P(X\le{x})$ | $pbinom(x,n,p)$ | $ppois(x,\lambda)$ |
+
+
+### Binomial distribution
+
+1. Let's think about a situation that could be modelled by $X \sim Bin(n = 8, p = 0.7)$?
+
+2. Use R to find the following **Binomial** probabilities for hybrid tomatoes:
+
+The new Dixie Red hybrid tomato is claimed to have larger fruit, better disease package and higher yield potential compared to the current industry leader Florida 47 R hybrid tomato.
+
+https://www.growingproduce.com/vegetables/seminis-introduces-dixie-red-fresh-tomato-variety/
+
+Suppose we plant 8 seeds of Dixie Red and that each seed has a 70% success rate of germination.
+
+- Let $X =$ The number of Dixie Red seeds that germinate. What is the distribution of $X$?
+- Use R to find the exact probability distribution function and add in the table.
+
+| Number seeds $x$     | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8
+|:-------------------- |:--- |:--- |:--- |:--- |:--- |:--- |:--- |:--- |:--- 
+| Probability $P(X=x)$ |     |     |     |     |     |     |     |     |
+
+```{r, eval = TRUE}
+x <- c(0,1,2,3,4,5,6,7,8) # creates x values. You can also use x <- 0:8
+p <- dbinom(x,8,0.7) #calculated the probabilities at each x.
+rbind(x,round(p,3)) # view the probabilities with x in top row and rounded p in bottom row
+
+sum(p) # Notice that all the probabilities sum to 1
+```
+
+- Use R to construct a histogram of the pdf. You can hit the code button to reveal the code to use.
+
+```{r, eval = TRUE}
+plot(x,p,type="h") # type "h" draws lines to the points
+```
+
+Notice the Shape: The pdf is **left skewed**. This is because there is a high success rate *(p = 0.7)* so we expect more germination than no germination.
+
+- What is the probability that 7 or more Dixie Red seeds germinate?
+
+$P(X\ge7)=P(X=7)+P(X=8)=1-P(X<7)=1-P(X\le6)$
+
+$P(X\ge7)=\frac{8!}{7!(8 - 7)!}0.7^7(1-0.7)^{8-7} + \frac{8!}{8!(8 - 8)!}0.7^8(1-0.7)^{8-8}$ 
+
+```{r}
+dbinom(7,8,0.7)+dbinom(8,8,0.7)
+
+## or
+
+1-pbinom(6,8,0.7)
+```
+
+
+### Poisson distribution
+
+On a certain joy flight path, the number of dolphin pod sightings is 2.2 per hour. Using a Poisson model, calculate the probabilities of viewing 0 to 8 dolphin pods in the table below
+
+- Use R to findnd the exact probability distribution function and all in the table.
+
+| Number dolphin pods $x$ | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   
+|:----------------------- |:--- |:--- |:--- |:--- |:--- |:--- |:--- |:--- |:---
+| Probability $P(X=x)$    |     |     |     |     |     |     |     |     |    
+
+```{r}
+x <- c(0,1,2,3,4,5,6,7,8) # creates x values. You can also use x <- 0:8
+p <- dpois(x,2.2) #calculated the probabilities at each x and round to 3 d.p.
+rbind(x,round(p,3)) # view the probabilities with x in top row and p in bottom row
+
+sum(p) ## notice that all the probabilities don't sum to 1
+```
+
+
+- do a barplot of the probabilities
+
+```{r, eval = TRUE}
+plot(x,p,type="h") # type "h" draws lines to the points
+```
+
+- What is the probability of seeing no dolphin pods.
+
+$P(X=0)=\frac{2.2^0e^{-2.2}}{0!}=0.1108$
+
+so about 11% of the flights i.e. 1 in 10 flights you will see no dolphins
+
+```{r}
+dpois(0,2.2)
+```
+
+- What is the probability of seeing more than 3 dolphin pods?
+
+$P(X\ge3)=1-P(X=0)-P(X=1)-P(X=2)-P(X=3)$
+
+$P(X\ge3)=1-\frac{2.2^0e^{-2.2}}{0!}-\frac{2.2^1e^{-2.2}}{1!}-\frac{2.2^2e^{-2.2}}{2!}-\frac{2.2^3e^{-2.2}}{3!}$
+$=0.1806476$
+
+```{r}
+1-dpois(0,2.2)-dpois(1,2.2)-dpois(2,2.2)-dpois(3,2.2)
+
+1-ppois(3,2.2)
+
+```
