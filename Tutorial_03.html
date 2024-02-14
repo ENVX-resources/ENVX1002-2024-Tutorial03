@@ -8,7 +8,7 @@
 
 <meta name="description" content="The University of Sydney">
 
-<title>Lab 01</title>
+<title>Tutorial 03</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -165,15 +165,15 @@ window.Quarto = {
 <link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/soles-assignment/assets/css/styles.css">
 </head>
 
-<body class="floating slimcontent">
+<body class="floating">
 
 <div id="quarto-search-results"></div>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Lab 01</h1>
-            <p class="subtitle lead">UNIT1234</p>
+      <h1 class="title">Tutorial 03</h1>
+            <p class="subtitle lead">ENVX1002</p>
                   <div>
         <div class="description">
           The University of Sydney
@@ -204,248 +204,251 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a>
+  <li><a href="#r-commands-for-binomial-and-poisson" id="toc-r-commands-for-binomial-and-poisson" class="nav-link active" data-scroll-target="#r-commands-for-binomial-and-poisson">R Commands for Binomial and Poisson</a>
   <ul class="collapse">
-  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
-  <li><a href="#readings" id="toc-readings" class="nav-link" data-scroll-target="#readings">Readings</a></li>
-  </ul></li>
-  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
-  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
-  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
-  <li><a href="#review" id="toc-review" class="nav-link" data-scroll-target="#review">Review</a></li>
-  <li><a href="#thanks" id="toc-thanks" class="nav-link" data-scroll-target="#thanks">Thanks!</a>
-  <ul class="collapse">
-  <li><a href="#attribution" id="toc-attribution" class="nav-link" data-scroll-target="#attribution">Attribution</a></li>
+  <li><a href="#binomial-distribution" id="toc-binomial-distribution" class="nav-link" data-scroll-target="#binomial-distribution">Binomial distribution</a></li>
+  <li><a href="#poisson-distribution" id="toc-poisson-distribution" class="nav-link" data-scroll-target="#poisson-distribution">Poisson distribution</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="template.pdf"><i class="bi bi-file-pdf"></i>PDF (soles-assignment)</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Tutorial_03.pdf"><i class="bi bi-file-pdf"></i>PDF (soles-assignment)</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-<section id="welcome" class="level2">
-<h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Learning outcomes
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Cat ipsum dolor sit amet, rub face on everything i love cuddles but pretend not to be evil:</p>
-<ul>
-<li>Be a nyan cat, feel great about it, be annoying 24/7 poop rainbows in litter box all day.</li>
-<li>Licks paws jump off balcony, onto stranger’s head cat mojo to pet a cat, rub its belly, endure blood and agony, quietly weep.</li>
-<li>Kitten is playing with dead mouse. Thug cat cats are the world cat snacks.</li>
-<li>If human is on laptop sit on the keyboard.</li>
-<li>Cick left leg for ninety minutes, still dirty lick ears lick paws spit up on light gray carpet.</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<section id="software" class="level3">
-<h3 class="anchored" data-anchor-id="software">Software</h3>
-<p>Cat ipsum dolor sit amet, has closed eyes but still sees you stuff and things but poop on couch. I rule on my back you rub my tummy i bite you hard put butt in owner’s face for lick face hiss at owner, pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back meow meow.</p>
-<p>Shove bum in owner’s face like camera lens lick butt give attitude steal the warm chair right after you get up make plans to dominate world and then take a nap.</p>
-</section>
-<section id="readings" class="level3">
-<h3 class="anchored" data-anchor-id="readings">Readings</h3>
-<p>If it fits, i sits.</p>
-<ul>
-<li><a href="http://www.catipsum.com/">Cat ipsum dolor sit amet</a>. I cry and cry and cry unless you pet me, and then maybe i cry just for fun purr as loud as possible, be the most annoying cat that you can, and, knock everything off the table.</li>
-<li><a href="https://docs.github.com/en">Github documentation</a>. Help for anyone interested in using Github.</li>
-</ul>
-</section>
-</section>
-<section id="exercise-1" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
-<p>Pet a cat, rub its belly, endure blood and agony, quietly weep, keep rubbing belly <span class="math inline">\sigma^2</span> with love:</p>
-<p><span id="eq-a"><span class="math display"> \sigma^2 = \frac{\sum_{i=1}^n (x_i - \mu)^2}{n}  \tag{1}</span></span></p>
-<p>Kitty time, cuddle, no cuddle, cuddle love scratch scratch, but instead of drinking water from the cat bowl, make sure to steal water from the toilet <span class="math inline">s^2</span>:</p>
-<p><span id="eq-b"><span class="math display"> s^2 = \frac{\sum_{i=1}^n (x_i - \bar{x})^2}{n-1}  \tag{2}</span></span></p>
-<ol type="a">
-<li>Stretch making sure that fluff gets into the owner’s eyes walk on a keyboard?</li>
-<li>Meow meow, i tell my human, so i cat mojo.</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R code goes here</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(speed <span class="sc">~</span> dist, <span class="at">data =</span> cars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = speed ~ dist, data = cars)
-
-Coefficients:
-(Intercept)         dist  
-     8.2839       0.1656  </code></pre>
-</div>
-</div>
-<!-- A way to toggle solutions - change content-visible to content-hidden to hide the solution. Use "search and replace" functonality to make it easier. -->
-<!-- An example of a way to include solution(s) from an external file. Alternatively, you can include the solution directly. -->
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-ANSWER
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(speed <span class="sc">~</span> dist, cars)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = speed ~ dist, data = cars)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--7.5293 -2.1550  0.3615  2.4377  6.4179 
-
-Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  8.28391    0.87438   9.474 1.44e-12 ***
-dist         0.16557    0.01749   9.464 1.49e-12 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 3.156 on 48 degrees of freedom
-Multiple R-squared:  0.6511,    Adjusted R-squared:  0.6438 
-F-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12</code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="exercise-2" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
-<p>Yet sleep on my human’s head. Ooooh feather moving feather! weigh eight pounds but take up a full-size bed or attack dog, run away and pretend to be victim. Hit you unexpectedly chase ball of string hack up furballs or get poop stuck in paws jumping out of litter box and run around the house.</p>
-<p>Scream meowing and smearing hot cat mud all over but ask to go outside and ask to come inside and ask to go outside and ask to come inside, for murr i hate humans they are so annoying need to check on human, have not seen in an hour might be dead oh look, human is alive, hiss at human, feed me.</p>
-<div id="fig-usydlogo" class="quarto-figure quarto-figure-center quarto-float anchored page-columns page-full">
-<figure class="quarto-float quarto-float-fig figure page-columns page-full">
-<div aria-describedby="fig-usydlogo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/usydlogo.png" class="img-fluid figure-img" width="300">
-</div>
-<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-usydlogo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: The University of Sydney logo in black with a specified width.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="exercise-3" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
-<p>Really likes hummus there’s a forty year old lady there let us feast. Kitty loves pigs sleep all day whilst slave is at work, play all night whilst slave is sleeping, scratch at the door then walk away for give attitude rub against owner because nose is wet, and murr i hate humans they are so annoying. Cat slap dog in face lick face hiss at owner, pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back.</p>
-<div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> Sepal.Width,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">colour =</span> Species)) <span class="sc">+</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display page-columns page-full">
-<div id="fig-main-margin-cap" class="quarto-figure quarto-figure-center quarto-float anchored page-columns page-full">
-<figure class="quarto-float quarto-float-fig figure page-columns page-full">
-<div aria-describedby="fig-main-margin-cap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="template_files/figure-html/fig-main-margin-cap-1.png" class="img-fluid figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-main-margin-cap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: A figure with a longer caption. The figure appears in the main column, but the caption is placed in the margin if using HTML output. In the PDF output, the caption remains in the main column.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Step 1: Sit on human
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Whatever lick plastic bags am in trouble, roll over, too cute for human to get mad or claw at curtains stretch and yawn nibble on tuna ignore human bite human hand yet trip owner up in kitchen i want food.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Step 2: Purrrr
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Walk on keyboard when in doubt, wash sleep on dog bed, force dog to sleep on floor so sitting in a box yet i can haz so fall asleep on the washing machine get scared by sudden appearance of cucumber.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Step 3: Show belly
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+<section id="r-commands-for-binomial-and-poisson" class="level2">
+<h2 class="anchored" data-anchor-id="r-commands-for-binomial-and-poisson">R Commands for Binomial and Poisson</h2>
+<p><span class="math inline">X \sim Bin(np)</span> and <span class="math inline">X \sim Po(\lambda)</span></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Function</th>
+<th style="text-align: left;">Binomial</th>
+<th style="text-align: left;">Poisson</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">PDF <span class="math inline">P(X=x)</span></td>
+<td style="text-align: left;"><span class="math inline">dbinom(x,n,p)</span></td>
+<td style="text-align: left;"><span class="math inline">dpois(x,\lambda)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CDF <span class="math inline">F(x)=P(X\le{x})</span></td>
+<td style="text-align: left;"><span class="math inline">pbinom(x,n,p)</span></td>
+<td style="text-align: left;"><span class="math inline">ppois(x,\lambda)</span></td>
+</tr>
+</tbody>
+</table>
+<section id="binomial-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="binomial-distribution">Binomial distribution</h3>
 <ol type="1">
-<li>Poop in litter box, scratch the walls leave hair everywhere crash against wall but walk away like nothing happened.</li>
-<li>Sleep all day whilst slave is at work, play all night whilst slave is sleeping.</li>
-<li>Get suspicious of own shadow then go play with toilette paper tweeting a baseball.</li>
+<li><p>Let’s think about a situation that could be modelled by <span class="math inline">X \sim Bin(n = 8, p = 0.7)</span>?</p></li>
+<li><p>Use R to find the following <strong>Binomial</strong> probabilities for hybrid tomatoes:</p></li>
 </ol>
+<p>The new Dixie Red hybrid tomato is claimed to have larger fruit, better disease package and higher yield potential compared to the current industry leader Florida 47 R hybrid tomato.</p>
+<p>https://www.growingproduce.com/vegetables/seminis-introduces-dixie-red-fresh-tomato-variety/</p>
+<p>Suppose we plant 8 seeds of Dixie Red and that each seed has a 70% success rate of germination.</p>
+<ul>
+<li>Let <span class="math inline">X =</span> The number of Dixie Red seeds that germinate. What is the distribution of <span class="math inline">X</span>?</li>
+<li>Use R to find the exact probability distribution function and add in the table.</li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Number seeds <span class="math inline">x</span></th>
+<th style="text-align: left;">0</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">2</th>
+<th style="text-align: left;">3</th>
+<th style="text-align: left;">4</th>
+<th style="text-align: left;">5</th>
+<th style="text-align: left;">6</th>
+<th style="text-align: left;">7</th>
+<th style="text-align: left;">8</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Probability <span class="math inline">P(X=x)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>) <span class="co"># creates x values. You can also use x &lt;- 0:8</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">dbinom</span>(x,<span class="dv">8</span>,<span class="fl">0.7</span>) <span class="co">#calculated the probabilities at each x.</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(x,<span class="fu">round</span>(p,<span class="dv">3</span>)) <span class="co"># view the probabilities with x in top row and rounded p in bottom row</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [,1]  [,2] [,3]  [,4]  [,5]  [,6]  [,7]  [,8]  [,9]
+x    0 1.000 2.00 3.000 4.000 5.000 6.000 7.000 8.000
+     0 0.001 0.01 0.047 0.136 0.254 0.296 0.198 0.058</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(p) <span class="co"># Notice that all the probabilities sum to 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1</code></pre>
+</div>
+</div>
+<ul>
+<li>Use R to construct a histogram of the pdf. You can hit the code button to reveal the code to use.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,p,<span class="at">type=</span><span class="st">"h"</span>) <span class="co"># type "h" draws lines to the points</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Tutorial_03_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Notice the Shape: The pdf is <strong>left skewed</strong>. This is because there is a high success rate <em>(p = 0.7)</em> so we expect more germination than no germination.</p>
+<ul>
+<li>What is the probability that 7 or more Dixie Red seeds germinate?</li>
+</ul>
+<p><span class="math inline">P(X\ge7)=P(X=7)+P(X=8)=1-P(X&lt;7)=1-P(X\le6)</span></p>
+<p><span class="math inline">P(X\ge7)=\frac{8!}{7!(8 - 7)!}0.7^7(1-0.7)^{8-7} + \frac{8!}{8!(8 - 8)!}0.7^8(1-0.7)^{8-8}</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="dv">7</span>,<span class="dv">8</span>,<span class="fl">0.7</span>)<span class="sc">+</span><span class="fu">dbinom</span>(<span class="dv">8</span>,<span class="dv">8</span>,<span class="fl">0.7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2552983</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## or</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span><span class="fu">pbinom</span>(<span class="dv">6</span>,<span class="dv">8</span>,<span class="fl">0.7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2552983</code></pre>
 </div>
 </div>
 </section>
-<section id="review" class="level2">
-<h2 class="anchored" data-anchor-id="review">Review</h2>
-<p>Meow and walk away find something else more interesting, and meow for food, then when human fills food dish, take a few bites of food and continue meowing bird bird bird bird bird bird human why take bird out i could have eaten that, or cat slap dog in face jump on counter removed by human jump on counter again removed by human meow before jumping on counter this time to let the human know am coming back yet sleep.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="poisson-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="poisson-distribution">Poisson distribution</h3>
+<p>On a certain joy flight path, the number of dolphin pod sightings is 2.2 per hour. Using a Poisson model, calculate the probabilities of viewing 0 to 8 dolphin pods in the table below</p>
+<ul>
+<li>Use R to findnd the exact probability distribution function and all in the table.</li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Number dolphin pods <span class="math inline">x</span></th>
+<th style="text-align: left;">0</th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">2</th>
+<th style="text-align: left;">3</th>
+<th style="text-align: left;">4</th>
+<th style="text-align: left;">5</th>
+<th style="text-align: left;">6</th>
+<th style="text-align: left;">7</th>
+<th style="text-align: left;">8</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Probability <span class="math inline">P(X=x)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>) <span class="co"># creates x values. You can also use x &lt;- 0:8</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">dpois</span>(x,<span class="fl">2.2</span>) <span class="co">#calculated the probabilities at each x and round to 3 d.p.</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(x,<span class="fu">round</span>(p,<span class="dv">3</span>)) <span class="co"># view the probabilities with x in top row and p in bottom row</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]  [,8]  [,9]
+x 0.000 1.000 2.000 3.000 4.000 5.000 6.000 7.000 8.000
+  0.111 0.244 0.268 0.197 0.108 0.048 0.017 0.005 0.002</code></pre>
 </div>
-<div class="callout-title-container flex-fill">
-Warning
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(p) <span class="do">## notice that all the probabilities don't sum to 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9995305</code></pre>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Pushed the mug off the table pretend you want to go out but then don’t love blinks and purr purr purr purr yawn carefully drink from water glass and then spill it everywhere and proceed to lick the puddle cat slap dog in face snob you for another person.</p>
+<ul>
+<li>do a barplot of the probabilities</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,p,<span class="at">type=</span><span class="st">"h"</span>) <span class="co"># type "h" draws lines to the points</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Tutorial_03_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
-</section>
-<section id="thanks" class="level2">
-<h2 class="anchored" data-anchor-id="thanks">Thanks!</h2>
-<section id="attribution" class="level3">
-<h3 class="anchored" data-anchor-id="attribution">Attribution</h3>
-<p>This lab was developed using resources that are available under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</a>, made available on the <a href="https://github.com/usyd-soles-edu/">SOLES Open Educational Resources repository</a>.</p>
+</div>
+<ul>
+<li>What is the probability of seeing no dolphin pods.</li>
+</ul>
+<p><span class="math inline">P(X=0)=\frac{2.2^0e^{-2.2}}{0!}=0.1108</span></p>
+<p>so about 11% of the flights i.e.&nbsp;1 in 10 flights you will see no dolphins</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dpois</span>(<span class="dv">0</span>,<span class="fl">2.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1108032</code></pre>
+</div>
+</div>
+<ul>
+<li>What is the probability of seeing more than 3 dolphin pods?</li>
+</ul>
+<p><span class="math inline">P(X\ge3)=1-P(X=0)-P(X=1)-P(X=2)-P(X=3)</span></p>
+<p><span class="math inline">P(X\ge3)=1-\frac{2.2^0e^{-2.2}}{0!}-\frac{2.2^1e^{-2.2}}{1!}-\frac{2.2^2e^{-2.2}}{2!}-\frac{2.2^3e^{-2.2}}{3!}</span> <span class="math inline">=0.1806476</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span><span class="fu">dpois</span>(<span class="dv">0</span>,<span class="fl">2.2</span>)<span class="sc">-</span><span class="fu">dpois</span>(<span class="dv">1</span>,<span class="fl">2.2</span>)<span class="sc">-</span><span class="fu">dpois</span>(<span class="dv">2</span>,<span class="fl">2.2</span>)<span class="sc">-</span><span class="fu">dpois</span>(<span class="dv">3</span>,<span class="fl">2.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1806476</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span><span class="fu">ppois</span>(<span class="dv">3</span>,<span class="fl">2.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1806476</code></pre>
+</div>
+</div>
 
 
 </section>
