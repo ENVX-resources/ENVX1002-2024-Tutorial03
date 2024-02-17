@@ -6,7 +6,7 @@ date: today
 date-format: "[Semester 1,] YYYY"
 ---
 
-## R Commands for Binomial and Poisson
+# R Commands for Binomial and Poisson
 $X \sim Bin(np)$ and  $X \sim Po(\lambda)$
 
 | Function              | Binomial        | Poisson            |
@@ -15,7 +15,7 @@ $X \sim Bin(np)$ and  $X \sim Po(\lambda)$
 | CDF $F(x)=P(X\le{x})$ | $pbinom(x,n,p)$ | $ppois(x,\lambda)$ |
 
 
-### Binomial distribution
+## Binomial distribution
 
 1. Let's think about a situation that could be modelled by $X \sim Bin(n = 8, p = 0.7)$?
 
@@ -23,7 +23,7 @@ $X \sim Bin(np)$ and  $X \sim Po(\lambda)$
 
 The new Dixie Red hybrid tomato is claimed to have larger fruit, better disease package and higher yield potential compared to the current industry leader Florida 47 R hybrid tomato.
 
-https://www.growingproduce.com/vegetables/seminis-introduces-dixie-red-fresh-tomato-variety/
+<https://www.growingproduce.com/vegetables/seminis-introduces-dixie-red-fresh-tomato-variety/>
 
 Suppose we plant 8 seeds of Dixie Red and that each seed has a 70% success rate of germination.
 
@@ -65,7 +65,7 @@ dbinom(7,8,0.7)+dbinom(8,8,0.7)
 ```
 
 
-### Poisson distribution
+## Poisson distribution
 
 On a certain joy flight path, the number of dolphin pod sightings is 2.2 per hour. Using a Poisson model, calculate the probabilities of viewing 0 to 8 dolphin pods in the table below
 
@@ -82,7 +82,6 @@ rbind(x,round(p,3)) # view the probabilities with x in top row and p in bottom r
 
 sum(p) ## notice that all the probabilities don't sum to 1
 ```
-
 
 - do a barplot of the probabilities
 
@@ -111,5 +110,4 @@ $=0.1806476$
 1-dpois(0,2.2)-dpois(1,2.2)-dpois(2,2.2)-dpois(3,2.2)
 
 1-ppois(3,2.2)
-
 ```
